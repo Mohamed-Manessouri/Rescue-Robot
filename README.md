@@ -12,7 +12,7 @@ The project consists of four main parts:
 
 
 # A computer vision model:
- This model is responsible for detecting humans within the video feed.
+ This model is responsible for detecting humans within the video feed.I m currently using a pretrained model YoloV8 but I m willing to build the model from scratch.
 
 
 # Video transmission: 
@@ -20,3 +20,9 @@ The project consists of four main parts:
 
 # Gps tracker:
  I don't know how to do it, yet I have an initial idea : I m going to use Gps module NEO 6m linked to raspberry pi, I m going to try to write a script that generates logs that will be added in a real time database and sent to fultter app in real time. But I don't really know how for the moment.
+
+
+
+
+For now, I m facing some challenges in assuring the video transmission in real time from raspberry pi to the laptop to the mobile app, and I still did not start the gps part yet neither the model.
+
