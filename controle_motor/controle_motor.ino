@@ -1,10 +1,13 @@
 #include <AFMotor.h>
+#include <Servo.h>
 
 AF_DCMotor motor1(1); // Motor connected to M1
 AF_DCMotor motor2(2); // Motor connected to M2
+Servo myServo;
 
 void setup() {
-  Serial.begin(9600); // Initialize serial communication at 9600 baud rate
+  Serial.begin(9600);// Initialize serial communication at 9600 baud rate
+  myServo.attach(10);
 }
 
 void loop() {
@@ -27,6 +30,12 @@ void loop() {
         break;
       case 'S':
         stopMotors();
+        break;
+      case 'A':
+        moveServoRight();
+        break;
+      case 'C': // Change this to a unique character, like 'C'
+        moveServoLeft();
         break;
       default:
         // Invalid command, do nothing or handle error
@@ -67,4 +76,12 @@ void turnRight() {
 void stopMotors() {
   motor1.run(RELEASE);
   motor2.run(RELEASE);
+}
+
+void moveServoRight() {
+  myServo.write(90);
+}
+
+void moveServoLeft() {
+  myServo.write(0);
 }
