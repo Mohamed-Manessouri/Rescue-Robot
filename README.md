@@ -16,11 +16,10 @@ The project consists of four main parts:
 
 
 # Video transmission: 
- The webcam captures real-time video, which is then transmitted to the computer vision model in my laptop. Once processed, the annotated video, highlighting human presence, is sent to the mobile app for visualization.
+ The webcam captures real-time video, which is then transmitted to the computer vision model in my laptop. Once processed, the annotated video, highlighting human presence, is sent to the mobile app for visualization, that is done using a server who host the video + detections and turn it into a mjpg-streamer format so flutter can get it.
 
 # Gps tracker:
- I don't know how to do it, yet I have an initial idea : I m going to use Gps module NEO 6m linked to raspberry pi, I m going to try to write a script that generates logs that will be added in a real time database and sent to fultter app in real time. But I don't really know how for the moment.
-
+ For this, I used Neo 6m Module Linked to the raspberry pi 3. The python script "gps_send.py" generates location and send it to the real time database in firebase ( A backend as a service platform) where I m creating my project. The flutter app fetch for this data and update the location of the robot.
 
 
 
