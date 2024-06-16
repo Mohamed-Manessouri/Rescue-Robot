@@ -1,0 +1,12 @@
+names:
+- person
+nc: 1
+roboflow:
+  license: Public Domain
+  project: person-detection-5u4uo
+  url: https://universe.roboflow.com/mansr/person-detection-5u4uo/dataset/1
+  version: 1
+  workspace: mansr
+test: ../test/images
+train: Person-Detection-1/train/images
+val: Person-Detection-1/valid/images

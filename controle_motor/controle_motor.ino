@@ -6,7 +6,7 @@ AF_DCMotor motor2(2); // Motor connected to M2
 Servo myServo;
 
 void setup() {
-  Serial.begin(9600);// Initialize serial communication at 9600 baud rate
+  Serial.begin(9600); // Initialize serial communication at 9600 baud rate
   myServo.attach(10);
 }
 
